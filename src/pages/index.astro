@@ -22,7 +22,7 @@ const listItems = [
 	<main class="main">
 		<div class="content-left">
 			<img class="hero-image" src="/src/images/image-web-3-desktop.jpg" alt="hero image" />
-			<!-- <img class="hero-image" src="/src/images/image-web-3-mobile.jpg" /> -->
+			<img class="hero-image-mobile" src="/src/images/image-web-3-mobile.jpg" />
 			<div class="hero-content">
 				<h1>The Bright Future of Web 3.0?</h1>
 				<div class="hero-text">
@@ -132,7 +132,39 @@ const listItems = [
 		list-style: none;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
 		gap: 2rem;
+	}
+
+	@media screen and (min-width: 1061px) {
+		.hero-image-mobile {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 1060px) {
+		.main {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.hero-content {
+			flex-direction: column;
+			gap: 2rem;
+		}
+
+		.hero-text {
+			gap: 2rem;
+		}
+
+		.hero-image {
+			display: none;
+			max-width: ;
+		}
+
+		ul {
+			flex-direction: column;
+			margin-bottom: 3rem;
+			align-items: flex-start;
+		}
 	}
 </style>

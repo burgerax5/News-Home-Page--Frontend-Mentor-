@@ -30,4 +30,10 @@ const { article } = Astro.props
 		line-height: 1.5rem;
 		color: gray;
 	}
+
+    @media screen and (max-width: 1060px) {
+        article:last-of-type {
+            padding-bottom: 2rem;
+        }
+    }
 </style>

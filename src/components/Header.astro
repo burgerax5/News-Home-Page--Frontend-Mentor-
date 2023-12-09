@@ -1,4 +1,5 @@
 ---
+import Hamburger from "./Hamburger";
 ---
 
 <header class="header">
@@ -13,6 +14,7 @@
             <a>Trending</a>
             <a>Categories</a>
         </nav>
+        <Hamburger client:load />
     </div>
 </header>
 
@@ -22,6 +24,10 @@
         align-items: center;
         justify-content: space-between;
         margin-block: 4rem;
+    }
+
+    .logo {
+        cursor: pointer;
     }
 
     .nav {
@@ -37,5 +43,15 @@
 
     .nav a:hover {
         color: var(--accent-color);
+    }
+
+    @media screen and (max-width: 1060px) {
+        .nav {
+            display: none;
+        }
+
+        .container {
+            margin-block: 2rem;
+        }
     }
 </style>

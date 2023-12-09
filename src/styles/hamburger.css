@@ -1,0 +1,53 @@
+.hamburger-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.hamburger-menu > * {
+    opacity: 0;
+    animation: load-in 0.25s forwards;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.192);
+    z-index: 998;
+}
+
+.mobile-menu {
+    width: 15rem;
+    background-color: var(--background-color);
+    height: 100%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    padding: 2rem;
+}
+
+.mobile-menu a:first-of-type {
+    padding-top: 12.5vh;
+}
+
+.mobile-menu a {
+    font-size: 1.15rem;
+    cursor: pointer;
+    transition: color 0.25s;
+}
+
+.mobile-menu a:hover {
+    color: var(--accent-color);
+}
+
+@keyframes load-in {
+    to {
+        opacity: 100%;
+    }
+}
