@@ -77,7 +77,8 @@
 }
 
 @media screen and (min-width: 1060px) {
-    .hamburger-menu {
+    .hamburger-menu,
+    .hamburger-menu > * {
         display: none;
     }
 }
