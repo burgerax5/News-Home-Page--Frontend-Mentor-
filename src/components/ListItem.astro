@@ -3,7 +3,7 @@ const { listItem, index } = Astro.props
 ---
 
 <li class="list-item">
-    <img src={listItem.image}/>
+    <img src={listItem.image} alt={listItem.title} loading="lazy"/>
     <div class="list-item-text">
         <h3>0{index + 1}</h3>
         <h4>{listItem.title}</h4>

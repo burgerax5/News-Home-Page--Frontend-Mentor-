@@ -4,6 +4,13 @@ import Header from '../components/Header.astro';
 import Article from '../components/Article.astro'
 import ListItem from '../components/ListItem.astro';
 
+import heroImage from '../images/image-web-3-desktop.jpg'
+import mobileHeroImage from '../images/image-web-3-mobile.jpg'
+
+import retroPC from '../images/image-retro-pcs.jpg'
+import topLaptops from '../images/image-top-laptops.jpg'
+import gamingGrowth from '../images/image-gaming-growth.jpg'
+
 const articles = [
 	{title: 'Hydrogen VS Electric Cars', text: 'Will hydrogen-fueled cars ever catch up to EVs?'},
 	{title: 'The Downsides of AI Artistry', text: 'What are the possible adverse effects of on-demand AI image generation?'},
@@ -11,9 +18,9 @@ const articles = [
 ]
 
 const listItems = [
-	{image: '/src/images/image-retro-pcs.jpg', title: 'Reviving Retro PCs', text: 'What happens when old PCs are given modern upgrades?'},
-	{image: '/src/images/image-top-laptops.jpg', title: 'Top 10 Laptops of 2022', text: 'Our best picks for various needs and budgets.'},
-	{image: '/src/images/image-gaming-growth.jpg', title: 'The Growth of Gaming', text: 'How the pandemic has sparked fresh opportunities.'}
+	{image: retroPC.src, title: 'Reviving Retro PCs', text: 'What happens when old PCs are given modern upgrades?'},
+	{image: topLaptops.src, title: 'Top 10 Laptops of 2022', text: 'Our best picks for various needs and budgets.'},
+	{image: gamingGrowth.src , title: 'The Growth of Gaming', text: 'How the pandemic has sparked fresh opportunities.'}
 ]
 
 ---
@@ -21,8 +28,8 @@ const listItems = [
 <Layout title="Home">
 	<main class="main">
 		<div class="content-left">
-			<img class="hero-image" src="/src/images/image-web-3-desktop.jpg" alt="hero image" />
-			<img class="hero-image-mobile" src="/src/images/image-web-3-mobile.jpg" />
+			<img class="hero-image" src={heroImage.src} loading="lazy" alt="hero image" />
+			<img class="hero-image-mobile" src={mobileHeroImage.src} loading="lazy" alt="hero image" />
 			<div class="hero-content">
 				<h1>The Bright Future of Web 3.0?</h1>
 				<div class="hero-text">
