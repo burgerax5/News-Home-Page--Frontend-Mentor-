@@ -15,15 +15,18 @@ function Hamburger() {
                 {!toggled && <img className="hamburger" src="/src/images/icon-menu.svg"/>}
                 {toggled && <img className="close" src="/src/images/icon-menu-close.svg"/>}
             </div>
-            {toggled && <div className="overlay">
-                <div className="mobile-menu">
-                    <a>Home</a>
-                    <a>New</a>
-                    <a>Popular</a>
-                    <a>Trending</a>
-                    <a>Categories</a>
+            {toggled && 
+                <div className="mobile-menu-container">
+                    <div className="overlay" onClick={handleClick}></div>
+                    <div className="mobile-menu">
+                        <a>Home</a>
+                        <a>New</a>
+                        <a>Popular</a>
+                        <a>Trending</a>
+                        <a>Categories</a>
+                    </div>
                 </div>
-            </div>}
+            }
         </>
     )
 }

@@ -11,7 +11,18 @@
     animation: load-in 0.25s forwards;
 }
 
+.mobile-menu-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    animation: load-in 0.25s forwards;
+}
+
 .overlay {
+    width: 100%;
     position: absolute;
     left: 0;
     top: 0;
@@ -22,18 +33,20 @@
 }
 
 .mobile-menu {
+    position: fixed;
     width: 15rem;
     background-color: var(--background-color);
     height: 100%;
-    margin-left: auto;
+    right: 0;
     display: flex;
     flex-direction: column;
     gap: 1.75rem;
     padding: 2rem;
+    z-index: 998;
 }
 
 .mobile-menu a:first-of-type {
-    padding-top: 12.5vh;
+    margin-top: 12.5vh;
 }
 
 .mobile-menu a {
@@ -46,8 +59,19 @@
     color: var(--accent-color);
 }
 
+.close {
+    position: fixed;
+    right: 1rem;
+}
+
 @keyframes load-in {
     to {
         opacity: 100%;
+    }
+}
+
+@media screen and (max-width: 255px) {
+    .mobile-menu {
+        width: 100%;
     }
 }
