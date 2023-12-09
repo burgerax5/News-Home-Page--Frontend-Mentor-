@@ -1,0 +1,41 @@
+---
+---
+
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src="/src/images/logo.svg" alt="logo"/>
+        </div>
+        <nav class="nav">
+            <a>Home</a>
+            <a>New</a>
+            <a>Popular</a>
+            <a>Trending</a>
+            <a>Categories</a>
+        </nav>
+    </div>
+</header>
+
+<style>
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-block: 4rem;
+    }
+
+    .nav {
+        display: flex;
+        gap: 2rem;
+        color: var(--color-gray);
+    }
+
+    .nav a {
+        cursor: pointer;
+        transition: 0.25s ease;
+    }
+
+    .nav a:hover {
+        color: var(--accent-color);
+    }
+</style>

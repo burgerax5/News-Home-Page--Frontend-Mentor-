@@ -1,0 +1,33 @@
+---
+const { article } = Astro.props
+---
+
+<article>
+    <h3>{article.title}</h3>
+    <p>{article.text}</p>
+</article>
+
+<style>
+	article {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid gray;
+	}
+
+	article:last-of-type {
+		padding-bottom: 0;
+		border: none;
+	}
+
+	article h3 {
+		font-size: 1.15rem;
+	}
+
+	article p {
+		font-size: 0.85rem;
+		line-height: 1.5rem;
+		color: gray;
+	}
+</style>

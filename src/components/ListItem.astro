@@ -1,0 +1,46 @@
+---
+const { listItem, index } = Astro.props
+---
+
+<li class="list-item">
+    <img src={listItem.image}/>
+    <div class="list-item-text">
+        <h3>0{index + 1}</h3>
+        <h4>{listItem.title}</h4>
+        <p>{listItem.text}</p>
+    </div>
+</li>
+
+<style>
+    li {
+		display: flex;
+        gap: 1.5rem;
+	}
+
+    .list-item-text {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    h3 {
+        color: var(--color-lightgray);
+        font-size: 1.75rem;
+        font-weight: 800;
+    }
+
+    h4 {
+        font-weight: 800;
+    }
+
+    img {
+        width: 6rem;
+        height: 100%;
+        aspect-ratio: 200 / 254;
+    }
+
+    p {
+        font-size: 10pt;
+        line-height: 1.35rem;
+    }
+</style>
