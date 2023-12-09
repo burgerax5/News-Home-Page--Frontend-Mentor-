@@ -75,3 +75,9 @@
         width: 100%;
     }
 }
+
+@media screen and (min-width: 1060px) {
+    .hamburger-menu {
+        display: none;
+    }
+}

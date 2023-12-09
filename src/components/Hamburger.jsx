@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import '../styles/hamburger.css'
+import hamburger from '../images/icon-menu.svg'
+import close from '../images/icon-menu-close.svg'
 
 function Hamburger() {
 
@@ -12,8 +14,8 @@ function Hamburger() {
     return (
         <>
             <div className="hamburger-menu" onClick={handleClick}>
-                {!toggled && <img className="hamburger" src="/src/images/icon-menu.svg"/>}
-                {toggled && <img className="close" src="/src/images/icon-menu-close.svg"/>}
+                {!toggled && <img className="hamburger" src={hamburger.src} />}
+                {toggled && <img className="close" src={close.src} />}
             </div>
             {toggled && 
                 <div className="mobile-menu-container">
